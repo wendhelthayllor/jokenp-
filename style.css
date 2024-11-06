@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-color: #ff9a9e;
+    }
+    25% {
+        background-color: #fad0c4;
+    }
+    50% {
+        background-color: #fbc2eb;
+    }
+    75% {
+        background-color: #a1c4fd;
+    }
+    100% {
+        background-color: #ff9a9e;
+    }
+}
+
+
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    animation: gradientBackground 10s infinite alternate;
+    transition: background 5s ease;
+}
+
+
+.container {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.buttons {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 70px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s, opacity 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05); 
+}
+
+#rock {
+    background-color: rgb(255, 184, 91);
+}
+
+#paper {
+    background-color: rgb(104, 202, 255);
+}
+
+#scissors {
+    background-color: rgb(156, 255, 117);
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.your-score span {
+    color: rgb(46, 46, 252);
+}
+
+.machine-score span {
+    color: rgb(255, 54, 54);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    button {
+        font-size: 50px; 
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
